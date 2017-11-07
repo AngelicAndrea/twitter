@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Twitter</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </nav>
+    </header>
+
+    <section class="contenedor-perfil">
+        <div>
+            <h4>Reto de Código</h4>
+            <p class="textoPerfil">Hola,<br>soy front-developer jr.</p>
+            <hr>
+            <h6>Código</h6>
+        </div>
+    </section>
+    
+    <section id="comments">
+        <div class="container-center">
+            <textarea id="comment" placeholder="¿Qué estas pensando?" onkeydown="count()" onKeyUp="count()"></textarea>
+            <p id="message"></p> <!-- parrafo en donde irá el comentario nuevo --> 
+            <hr>
+            <button type="button" id="btn" onclick="myFunction()">Twitter</button>
+            <input disabled size="3" value="140" id="contador"> <!-- versión 0.0.2 agregue el contador de caracteres -->
+            <div id="cont"></div>  <!-- el contenido del mensaje nuevo --> 
+        </div>
+    </section>
+
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>        
+ 
