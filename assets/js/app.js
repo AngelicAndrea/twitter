@@ -45,8 +45,6 @@ function count(){ // llama la función al momento de presionar y soltar el tecla
         document.getElementById("comment").value = text.substr(0,tweetCounter);//estrae desde la posición 0 y el total de los caractere.
 
     }
-
-    
      
 //Versión 0.0.3 contadores de colores
 
@@ -62,11 +60,27 @@ function count(){ // llama la función al momento de presionar y soltar el tecla
     }
     if (longitud >= 130 && longitud < 140) {// si la longitud es mayor o igual a 130 && longitud menor que 140 aparece color rojo
         document.getElementById("contador").style.color = "red"
-    }
-
-
+    } 
     
-}    
+    
+}
+
+// versión 0.0.4 crezca el textarea al momento de hacer enter
+
+var textarea = document.getElementById('comment');//llamo mi textarea
+
+textarea.addEventListener('keydown', autosize); // creo un evento al momento de escribir.
+
+function autosize(){ //creo la función 
+    var el = this; //con el this llamo el metodo osea la función
+    setTimeout(function(){//creo una función que ocurre a un milisimo de segundo
+      el.style.cssText = 'height:auto; padding:0';
+      el.style.cssText = 'height:' + el.scrollHeight + 'px'; // con el.scrollHeight se obtine el valor del elemento y se va sumando con px
+    },0);// consultar porque se usa el n°?
+  }
+
+
+
 
 
 
